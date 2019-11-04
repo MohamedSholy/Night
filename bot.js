@@ -1,7 +1,7 @@
   
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix= "R";
+var prefix= "^";
 client.on("message", message => {
     if(message.content.startsWith(prefix + 'v2min')) {
      let args = message.content.split(" ").slice(1);
@@ -17,7 +17,7 @@ client.on("message", message => {
     //كود بسيط روم مؤقت ويمديك تعدل مدته بكل سهولة  وصلوه عدد كبير انزلكم اكواد اكثر
 
 client.on('message', message => {
-    var prefix = "R"
+    var prefix = "^"
 if (message.content.startsWith(prefix + "uptime")) {
    let uptime = client.uptime;
 
@@ -61,7 +61,7 @@ if (message.content.startsWith(prefix + "uptime")) {
 });
 
 client.on("message", msg => {
-    var prefix = "R";
+    var prefix = "^";
 if(msg.content.startsWith (prefix + "id")) {
 if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
 const embed = new Discord.RichEmbed();
@@ -81,7 +81,7 @@ msg.channel.send({embed: embed})
 });
 
 
-var prefix = "R"
+var prefix = "^"
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
@@ -134,7 +134,9 @@ client.on("message", message => {
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'mute-log');
     let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
-    if (!muteRole) return message.reply("** لا يوجد رتبة الميوت 'Muted' **").catch(console.error);
+      
+      
+      
     if (message.mentions.users.size < 1) return message.reply('** يجب عليك منشنت شخص اولاً**').catch(console.error);
     
     const embed = new Discord.RichEmbed()
@@ -159,7 +161,7 @@ client.on("message", message => {
   });
 
 
-var prefix = "R";
+var prefix = "^";
 
 client.on('message', message => {
   if (message.author.bot) return;
@@ -207,7 +209,7 @@ client.on('message', msg => {
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-    client.user.setGame(`صوتك هو أغنيتي المُفضله`,`http://twitch.tv/Dream`);
+    client.user.setGame(`back us causibg you confusion`,`http://twitch.tv/Dream`);
   });
 
 
